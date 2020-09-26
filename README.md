@@ -20,7 +20,7 @@ You can generate and add into the context.
 If You make log ```.WithContext(ctx).Info("message")```, the correlation Id will automatically extracted and added into the log.
 
 ## TraceID
-It is like the corelation Id but int he flow is changeing and using linked list shows the flow steps.
+It is like the correlationID but in the flow it is changing and using linked list to shows the flow steps.
 
 ```
 type TraceID struct {
