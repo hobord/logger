@@ -70,3 +70,51 @@ Log.WithContext(ctx).WithError(err).Error("Error message")
 ...
 
 ```
+
+
+## Example output
+
+```
+[
+  {
+    "AppBin": "main",
+    "AppPath": "/app",
+    "CorelationID": "cf9ba76b-544d-4d40-8e94-cc62a4be941b",
+    "GitHash": "fa2309",
+    "TraceIDCurrent": "285cd6fb-43e1-4f9e-8ad8-df835421626e",
+    "TraceIDPrev": "",
+    "Version": "1",
+    "level": "info",
+    "msg": "App start",
+    "tags": [
+      "apiserver",
+      "orders"
+    ],
+    "time": "2020-09-27T14:18:28+03:00"
+  },
+  {
+    "AppBin": "main",
+    "AppPath": "/app",
+    "CorelationID": "cf9ba76b-544d-4d40-8e94-cc62a4be941b",
+    "GitHash": "fa2309",
+    "TraceIDCurrent": "004673de-ae55-41e3-be4e-50e790b2d00d",
+    "TraceIDPrev": "285cd6fb-43e1-4f9e-8ad8-df835421626e",
+    "Version": "1",
+    "level": "info",
+    "action": "order",
+    "id": 15,
+    "user": {
+      "ID": 125,
+      "Name": "Bob"
+    },
+    "items":["item1","item2"],
+    "msg": "New request",
+    "tags": [
+      "apiserver",
+      "orders"
+      "order"
+    ],
+    "time": "2020-09-27T14:18:28+03:00"
+  }
+]
+```
