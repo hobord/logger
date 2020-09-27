@@ -33,11 +33,15 @@ With ```traceID.NewStep()```  You can indicate the next step in Your process flo
 
 You can store TraceID also in the context ```traceID.SetToContext(ctx)```, and when You make make log with context ```.WithContext(ctx).Info("message")``` the it will automatically extracted and added into the log. 
 
+## Logrus implementation
+
+lgrs.MakeLoggerWithLogrus(logrusInstance) is the constructor for the logrus implementstion. If You pass nil paramter then it will create logrush instance by self.
+
 ## Example use:
 ```
 
 Log = lgrs.MakeLoggerWithLogrus(nil)
-ctx = context.Background()
+ctx := context.Background()
 corelationID := logger.MakeCorelationID()
 ctx = corelationID.SetToContext(ctx)
 traceID := logger.MakeTraceID()

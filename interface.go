@@ -10,6 +10,10 @@ type Fields = map[string]interface{}
 
 // Logger is the interface for loggers
 type Logger interface {
+	Trace(...interface{})
+	Traceln(...interface{})
+	Tracef(string, ...interface{})
+
 	Debug(...interface{})
 	Debugln(...interface{})
 	Debugf(string, ...interface{})
@@ -29,6 +33,10 @@ type Logger interface {
 	Fatal(...interface{})
 	Fatalln(...interface{})
 	Fatalf(string, ...interface{})
+
+	Panic(...interface{})
+	Panicln(...interface{})
+	Panicf(string, ...interface{})
 
 	Log(string, ...interface{})
 	Logln(string, ...interface{})

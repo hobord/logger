@@ -2,6 +2,16 @@ package lgrs
 
 import "github.com/hobord/logger"
 
+func (l *lgrs) Trace(args ...interface{}) {
+	l.base.Trace(args...)
+}
+func (l *lgrs) Traceln(args ...interface{}) {
+	l.base.Traceln(args...)
+}
+func (l *lgrs) Tracef(format string, args ...interface{}) {
+	l.base.Tracef(format, args...)
+}
+
 func (l *lgrs) Debug(args ...interface{}) {
 	l.base.Debug(args...)
 }
@@ -50,6 +60,16 @@ func (l *lgrs) Fatalln(args ...interface{}) {
 }
 func (l *lgrs) Fatalf(format string, args ...interface{}) {
 	l.base.Fatalf(format, args...)
+}
+
+func (l *lgrs) Panic(args ...interface{}) {
+	l.base.Panic(args...)
+}
+func (l *lgrs) Panicln(args ...interface{}) {
+	l.base.Panicln(args...)
+}
+func (l *lgrs) Panicf(format string, args ...interface{}) {
+	l.base.Panicf(format, args...)
 }
 
 func (l *lgrs) Log(level string, args ...interface{}) {
